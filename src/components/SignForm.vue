@@ -5,6 +5,8 @@
       </slot>
       <InputField :label="'Email'" :inputName="'email'" :inputType="'email'"/>
       <InputField :label="'Password'" :inputName="'password'" :inputType="'password'"/>
+      <div v-if="rememberBox" class=""></div>
+      <div v-else class="p-2"></div>
       <button class="btn-submit rounded py-2 w-100" type="submit">Sign {{ rememberBox ? 'Up' : 'In' }}</button>
     </div>  
   </div>
