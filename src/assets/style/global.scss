@@ -12,6 +12,10 @@ body,
   }
 }
 
+input {
+  outline: none;
+}
+
 // Header
 .header {
   width: 100%;
@@ -55,7 +59,29 @@ body,
       }
       input {
         border: none;
+        background-color: $color-gray;
+      }
+    }
+    .checkbox {
+      input {
+        appearance: none;
+        width: 1.275rem;
+        height: 1.275rem;
+        border: none;
+        cursor: pointer;
         background: $color-gray;
+        &:checked {
+          background-image: url(../images/check.svg);
+          background-size: 98%;
+          background-position: center;
+          fill: $color-blue;
+        }
+      }
+      label {
+      cursor: pointer;
+        font-weight: 500;
+        font-family: 'Montserrat';
+        font-size: .9rem;
       }
     }
     .btn-submit {

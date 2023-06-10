@@ -1,16 +1,16 @@
 <template>
   <div class="router">
-    <SignIn />
+    <SignUp />
   </div>
 </template>
 
 <script>
-  import SignIn from '../views/SignIn.vue';
+  import SignUp from '../views/SignUp.vue';
 
   export default {
     name: "AppRouter",
     components: {
-      SignIn
+      SignUp
     }
   }
 </script>
