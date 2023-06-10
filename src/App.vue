@@ -1,15 +1,18 @@
 <template>
   <AppHeader />
+  <AppRouter />
 </template>
 
 <script>
 import AppHeader from './components/AppHeader.vue'
+import AppRouter from './components/AppRouter.vue';
 
 export default {
   name: 'App',
   components: {
-    AppHeader
-  }
+    AppHeader,
+    AppRouter,
+}
 }
 </script>
 
