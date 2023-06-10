@@ -1,0 +1,19 @@
+@import "color";
+@import "font";
+
+// Header
+.header {
+  width: 100%;
+
+  color: $color-white;
+
+  background: $color-blue;
+  .bi {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+  a {
+    color: $color-white;
+    text-decoration: none;
+  }
+}
