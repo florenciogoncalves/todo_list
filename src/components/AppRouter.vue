@@ -1,16 +1,16 @@
 <template>
-  <div class="router d-flex">
-    <YourBoards />
-  </div>
+  <main class="router d-flex">
+    <ViewBoard :boardName="'Daily'" />
+  </main>
 </template>
 
 <script>
-  import YourBoards from '../views/YourBoards.vue';
+  import ViewBoard from '../views/ViewBoard.vue';
 
   export default {
     name: "AppRouter",
     components: {
-      YourBoards
+      ViewBoard
     }
   }
 </script>
