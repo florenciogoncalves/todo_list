@@ -1,16 +1,16 @@
 <template>
-  <div class="router">
-    <SignUp />
+  <div class="router d-flex">
+    <YourBoards />
   </div>
 </template>
 
 <script>
-  import SignUp from '../views/SignUp.vue';
+  import YourBoards from '../views/YourBoards.vue';
 
   export default {
     name: "AppRouter",
     components: {
-      SignUp
+      YourBoards
     }
   }
 </script>
