@@ -78,10 +78,10 @@ input {
         }
       }
       label {
-      cursor: pointer;
+        cursor: pointer;
         font-weight: 500;
-        font-family: 'Montserrat';
-        font-size: .9rem;
+        font-family: "Montserrat";
+        font-size: 0.9rem;
       }
     }
     .btn-submit {
@@ -95,8 +95,8 @@ input {
       font-weight: 500;
     }
     .with-google {
-      font-family: 'Montserrat';
-      font-size: .9rem;
+      font-family: "Montserrat";
+      font-size: 0.9rem;
       font-weight: 500;
       svg {
         width: 1.475rem;
@@ -104,19 +104,21 @@ input {
       }
     }
   }
-  .your-boards{
+  .your-boards {
+    $color-gray: #e5e5e5;
+    $shadow: -1px 0px 3px 2px $color-gray;
+    $radius: 0.25rem;
     width: 100%;
     height: 100%;
     .search-field {
       display: grid;
       grid-template-columns: 1fr auto;
-      $radius: .25rem;
       .search {
         border: none;
         border-top-left-radius: $radius;
         border-bottom-left-radius: $radius;
-        box-shadow: -1px 0px 3px 2px $color-gray;
-        font-size: .9rem;
+        box-shadow: $shadow;
+        font-size: 0.9rem;
       }
       .btn-submit {
         border: none;
@@ -124,8 +126,64 @@ input {
         border-bottom-right-radius: $radius;
         width: 2.75rem;
         fill: $color-white;
-        background: url(../images/icons8-pesquisar.svg) center no-repeat, $color-blue;
+        background: url(../images/icons8-pesquisar.svg) center no-repeat,
+          $color-blue;
         background-size: 42.5%;
+      }
+    }
+    .boards-container {
+      .board-box {
+        height: 8rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border: none;
+        border-radius: $radius;
+        box-shadow: $shadow;
+        font-weight: 500;
+        text-decoration: none;
+        color: currentColor;
+        background: none;
+        &#new-board {
+          color: $color-gray;
+          background-image: repeating-linear-gradient(
+              180deg,
+              $color-gray,
+              $color-gray 17px,
+              transparent 17px,
+              transparent 27px,
+              $color-gray 27px
+            ),
+            repeating-linear-gradient(
+              270deg,
+              $color-gray,
+              $color-gray 17px,
+              transparent 17px,
+              transparent 27px,
+              $color-gray 27px
+            ),
+            repeating-linear-gradient(
+              0deg,
+              $color-gray,
+              $color-gray 17px,
+              transparent 17px,
+              transparent 27px,
+              $color-gray 27px
+            ),
+            repeating-linear-gradient(
+              90deg,
+              $color-gray,
+              $color-gray 17px,
+              transparent 17px,
+              transparent 27px,
+              $color-gray 27px
+            );
+          background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;
+          background-position: 0 0, 0 0, 100% 0, 0 100%;
+          background-repeat: no-repeat;
+          box-shadow: none;
+        }
       }
     }
   }
