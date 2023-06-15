@@ -54,7 +54,7 @@
                   d="M16 8v8l4 4"
                 />
               </svg>
-              &nbsp;In progress
+              In progress
             </a>
           </li>
           <li ref="done-marker" @click="mobileNav('done')" :class="{'selected': showTable == 'done'}">
@@ -77,7 +77,7 @@
                   stroke-width="1.5"
                 />
               </svg>
-              &nbsp;Done
+              Done
             </a>
           </li>
         </ul>

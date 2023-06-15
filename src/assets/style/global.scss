@@ -201,11 +201,14 @@ input {
       flex-direction: row;
       align-items: center;
       gap: .25rem;
+      padding: 0 .25rem .1rem;
+      border-bottom: 3px solid transparent;
       svg {
         height: 1.15rem;
         width: 1.15rem;
       }
       &.selected {
+        border-color: $color-pink;
         svg path, svg circle {
           stroke: $color-blue;
         }
