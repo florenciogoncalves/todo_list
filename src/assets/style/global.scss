@@ -187,4 +187,32 @@ input {
       }
     }
   }
+  .view-board {
+    width: 100%;
+    height: 100%;
+    nav li, nav a {
+      color: currentColor;
+      text-decoration: none;
+      font-weight: 400;
+      font-family: 'Montserrat';
+    }
+    li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: .25rem;
+      svg {
+        height: 1.15rem;
+        width: 1.15rem;
+      }
+      &.selected {
+        svg path, svg circle {
+          stroke: $color-blue;
+        }
+        a {
+          color: $color-blue;
+        }
+      }
+    }
+  }
 }
