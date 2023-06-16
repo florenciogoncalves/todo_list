@@ -25,6 +25,9 @@ import InputField from '../components/InputField.vue';
       SignForm,
       WithGoogle,
       InputField
-    }
+    },
+    mounted() {
+      this.$emit("changeLink", 'signup') 
+    },
   }
 </script>

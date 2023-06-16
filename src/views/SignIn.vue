@@ -20,6 +20,9 @@ import SignForm from '../components/SignForm.vue';
     components: {
       SignForm,
       WithGoogle
-    }
+    },
+    mounted() {
+      this.$emit("changeLink", 'signin')
+    },
   }
 </script>
