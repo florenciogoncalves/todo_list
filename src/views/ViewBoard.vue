@@ -79,10 +79,20 @@
           </li>
         </ul>
       </nav>
-      <section class="boards-container row row-cols-1 row-cols-lg-3 px-2 px-lg-3 g-lg-5 m-0">
-        <BoardCard :title="'To Do'"></BoardCard>
-        <BoardCard :title="'In progress'"></BoardCard>
-        <BoardCard :title="'Done'"></BoardCard>
+      <section class="boards-container row row-cols-1 row-cols-lg-3 px-2 px-lg-0 m-0 mt-lg-2">
+        <BoardCard :title="'To Do'" :id="'to-do'">
+          <TaskItem :taskName="'Do a Firewalking'" />
+          <TaskItem :taskName="'Learn How to Skate'" />
+        </BoardCard>
+        <BoardCard :title="'In progress'" :id="'in-progress'">
+          <TaskItem :taskName="'Climb a Light House'" />
+          <TaskItem :taskName="'Obtain a Patent'" />
+          <TaskItem :taskName="'Become a United Nations Interpreter'" />
+        </BoardCard>
+        <BoardCard :title="'Done'" :id="'done'">
+          <TaskItem :taskName="'See Stonehenge'" />
+          <TaskItem :taskName="'Party on a Yacht'" />
+        </BoardCard>
       </section>
     </div>
   </div>
@@ -90,10 +100,12 @@
 
 <script>
 import BoardCard from '@/components/BoardCard.vue';
+import TaskItem from '@/components/TaskItem.vue';
 export default {
   name: "ViewBoard",
   components: {
-    BoardCard
+    BoardCard,
+    TaskItem
   },
   data() {
     return {
