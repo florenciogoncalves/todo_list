@@ -4,10 +4,7 @@
       <h1 class="title mt-3 mt-md-5 ms-2 ms-sm-3">
         {{ boardName ? boardName : "Default" }}
       </h1>
-      <nav
-        ref="mobile-nav"
-        class="navbar mobile-nav px-2 border-top border-botto d-md-none"
-      >
+      <nav ref="mobile-nav" class="navbar mobile-nav px-2 border-top border-botto d-md-none" >
         <ul class="navbar-nav d-flex flex-row justify-content-between w-100">
           <li ref="to-do-marker" @click="mobileNav('to-do')" :class="{'selected': showTable == 'to-do'}">
             <svg
@@ -82,15 +79,22 @@
           </li>
         </ul>
       </nav>
-      <section class="boards-container"></section>
-      <div class="row-cols-3"></div>
+      <section class="boards-container row row-cols-1 row-cols-md-3 px-2 px-md-3 g-5">
+        <BoardCard :title="'To Do'"></BoardCard>
+        <BoardCard :title="'In progress'"></BoardCard>
+        <BoardCard :title="'Done'"></BoardCard>
+      </section>
     </div>
   </div>
 </template>
 
 <script>
+import BoardCard from '@/components/BoardCard.vue';
 export default {
   name: "ViewBoard",
+  components: {
+    BoardCard
+  },
   data() {
     return {
       showTable: "to-do",
