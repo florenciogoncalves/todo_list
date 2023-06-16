@@ -1,16 +1,15 @@
 <template>
   <main class="router d-flex">
-    <ViewBoard :boardName="'Daily'" />
+    <slot></slot>
   </main>
 </template>
 
 <script>
-  import ViewBoard from '../views/ViewBoard.vue';
-
   export default {
     name: "AppRouter",
-    components: {
-      ViewBoard
-    }
+    methods: {
+      changeLink() {
+      }
+    },
   }
 </script>

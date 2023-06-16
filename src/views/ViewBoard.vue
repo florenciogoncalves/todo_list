@@ -27,10 +27,10 @@
                 d="M11.5 16l3.5 3.5 6-6"
               />
             </svg>
-            <a href="#todo">To Do</a>
+            <span>To Do</span>
           </li>
           <li ref="in-progress-marker" @click="mobileNav('in-progress')" :class="{'selected': showTable == 'in-progress'}">
-            <a href="#in-progress">
+            <span>
               <svg
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -52,10 +52,10 @@
                 />
               </svg>
               In progress
-            </a>
+            </span>
           </li>
           <li ref="done-marker" @click="mobileNav('done')" :class="{'selected': showTable == 'done'}">
-            <a href="#done">
+            <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 23 23"
@@ -75,7 +75,7 @@
                 />
               </svg>
               Done
-            </a>
+            </span>
           </li>
         </ul>
       </nav>
