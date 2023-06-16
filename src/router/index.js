@@ -6,10 +6,11 @@ import ViewBoard from '../views/ViewBoard.vue'
 import YourBoards from '../views/YourBoards.vue'
 
 const routes = [
-  { path: '/', component: SignIn },
-  { path: '/sign-in', component: SignUp },
+  { path: '/sign-in', component: SignIn },
+  { path: '/sign-up', component: SignUp },
+  { path: '/your-boards', component: YourBoards },
   { path: '/view-board', component: ViewBoard },
-  { path: '/your-boards', component: YourBoards }
+  { path: '/:pathMatch(.*)', redirect: '/sign-in' }
 ];
 
 const router = createRouter({

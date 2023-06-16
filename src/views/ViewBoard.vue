@@ -129,7 +129,8 @@ export default {
   mounted() {
     this.mobileNav(this.showTable);
     window.addEventListener('resize', this.mobileResize);
-    this.mobileResize()
+    this.mobileResize();
+    this.$emit("changeLink", 'logged')
   },
 };
 </script>

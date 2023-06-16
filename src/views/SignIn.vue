@@ -22,7 +22,7 @@ import SignForm from '../components/SignForm.vue';
       WithGoogle
     },
     mounted() {
-      this.$emit("changeLink", 'signin')
+      this.$emit("changeLink", 'sign-in')
     },
   }
 </script>

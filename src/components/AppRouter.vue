@@ -6,10 +6,6 @@
 
 <script>
   export default {
-    name: "AppRouter",
-    methods: {
-      changeLink() {
-      }
-    },
+    name: "AppRouter"
   }
 </script>

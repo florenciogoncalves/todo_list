@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import WithGoogle from '..//components/WithGoogle.vue';
+import WithGoogle from '../components/WithGoogle.vue';
 import SignForm from '../components/SignForm.vue';
 import InputField from '../components/InputField.vue';
 
@@ -27,7 +27,7 @@ import InputField from '../components/InputField.vue';
       InputField
     },
     mounted() {
-      this.$emit("changeLink", 'signup') 
+      this.$emit("changeLink", 'sign-up') 
     },
   }
 </script>

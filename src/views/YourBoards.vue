@@ -34,6 +34,9 @@ export default {
   name: "YourBoards",
   components: {
     BoardBox
-  }
+  },
+  mounted() {
+    this.$emit("changeLink", 'logged')
+  },
 };
 </script>
