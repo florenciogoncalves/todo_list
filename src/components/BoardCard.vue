@@ -5,7 +5,7 @@
       <form action="" method="POST" class="add-new-task px-2 border-bottom mt-1 mt-lg-0">
         <input
           type="text"
-          class="insert-task border-0 w-100"
+          class="insert-task border-0 w-100 pb-1"
           placeholder="Type here"
           @input="typingFunc"
         />
@@ -24,7 +24,7 @@ export default {
   name: "BoardCard",
   data() {
     return {
-      typing: true
+      typing: false
     }
   },
   props: {

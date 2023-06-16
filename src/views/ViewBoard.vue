@@ -80,16 +80,16 @@
         </ul>
       </nav>
       <section class="boards-container row row-cols-1 row-cols-lg-3 px-2 px-lg-0 m-0 mt-lg-2">
-        <BoardCard :title="'To Do'" :id="'to-do'">
+        <BoardCard :title="'To Do'" :id="'to-do'" v-show="(mobileView && showTable == 'to-do') || !mobileView">
           <TaskItem :taskName="'Do a Firewalking'" />
           <TaskItem :taskName="'Learn How to Skate'" />
         </BoardCard>
-        <BoardCard :title="'In progress'" :id="'in-progress'">
+        <BoardCard :title="'In progress'" :id="'in-progress'" v-show="(mobileView && showTable == 'in-progress') || !mobileView">
           <TaskItem :taskName="'Climb a Light House'" />
           <TaskItem :taskName="'Obtain a Patent'" />
           <TaskItem :taskName="'Become a United Nations Interpreter'" />
         </BoardCard>
-        <BoardCard :title="'Done'" :id="'done'">
+        <BoardCard :title="'Done'" :id="'done'" v-show="(mobileView && showTable == 'done') || !mobileView">
           <TaskItem :taskName="'See Stonehenge'" />
           <TaskItem :taskName="'Party on a Yacht'" />
         </BoardCard>
@@ -110,6 +110,7 @@ export default {
   data() {
     return {
       showTable: "to-do",
+      mobileView: '',
     };
   },
   props: {
@@ -119,9 +120,16 @@ export default {
     mobileNav(refName) {
       this.showTable = refName;
     },
+    mobileResize() {
+    let element = this.$refs['mobile-nav']
+      if(getComputedStyle(element).getPropertyValue('display') == 'none') this.mobileView = false
+      else this.mobileView = true
+    }
   },
   mounted() {
     this.mobileNav(this.showTable);
+    window.addEventListener('resize', this.mobileResize);
+    this.mobileResize()
   },
 };
 </script>
