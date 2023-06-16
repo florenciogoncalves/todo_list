@@ -79,7 +79,7 @@
           </li>
         </ul>
       </nav>
-      <section class="boards-container row row-cols-1 row-cols-lg-3 px-2 px-lg-3 g-5">
+      <section class="boards-container row row-cols-1 row-cols-lg-3 px-2 px-lg-3 g-lg-5 m-0">
         <BoardCard :title="'To Do'"></BoardCard>
         <BoardCard :title="'In progress'"></BoardCard>
         <BoardCard :title="'Done'"></BoardCard>

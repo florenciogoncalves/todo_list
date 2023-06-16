@@ -190,18 +190,19 @@ $radius: 0.25rem;
   .view-board {
     width: 100%;
     height: 100%;
-    nav li, nav a {
+    nav li,
+    nav a {
       color: currentColor;
       text-decoration: none;
       font-weight: 400;
-      font-family: 'Montserrat';
+      font-family: "Montserrat";
     }
     li {
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: .25rem;
-      padding: 0 .25rem .1rem;
+      gap: 0.25rem;
+      padding: 0 0.25rem 0.1rem;
       border-bottom: 3px solid transparent;
       svg {
         height: 1.15rem;
@@ -209,7 +210,8 @@ $radius: 0.25rem;
       }
       &.selected {
         border-color: $color-pink;
-        svg path, svg circle {
+        svg path,
+        svg circle {
           stroke: $color-blue;
         }
         a {
@@ -219,6 +221,8 @@ $radius: 0.25rem;
     }
   }
   .board-card {
+    display: flex;
+    flex-direction: column;
     .title {
       border-top-left-radius: $radius;
       border-top-right-radius: $radius;
@@ -230,10 +234,66 @@ $radius: 0.25rem;
       background-color: $color-blue;
     }
     .tasks {
-      .insert-task {
-        font-size: .85rem;
-        &::placeholder {
-          color: #d5d5d5;
+      height: 60vh !important;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 0.5rem;
+      box-shadow: 0px 0px 10px #d5d5d5;
+      .add-new-task {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.5rem;
+        .submit {
+          width: 1rem;
+          height: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          border: none;
+          color: $color-white;
+          font-size: 0.775rem;
+          background: $color-blue;
+        }
+        .insert-task {
+          font-size: 0.85rem;
+          &::placeholder {
+            color: #d5d5d5;
+          }
+        }
+      }
+      .tasks-list {
+        .task-item {
+          height: max-content;
+          width: 100%;
+          display: flex;
+          align-items: stretch;
+          border-radius: $radius;
+          overflow: hidden;
+          flex: 1 1 1;
+          .task-name {
+            width: 100%;
+            max-height: max-content;
+            border: 1px solid $color-blue;
+            border-right: none;
+            border-top-left-radius: $radius;
+            border-bottom-left-radius: $radius;
+            font-size: .85rem;
+            transition: all .3s;
+            &:hover {
+              color: $color-white;
+              background-color: $color-blue;
+            }
+          }
+          .delete-task {
+            border: none;
+            border-top-right-radius: $radius;
+            border-bottom-right-radius: $radius;
+            color: $color-white;
+            font-family: 'Montserrat';
+            font-size: .9rem;
+            background: $color-pink;
+          }
         }
       }
     }
